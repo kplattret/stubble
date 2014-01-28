@@ -1,0 +1,223 @@
+/* ==========================================================================
+    SASS variables
+   ========================================================================== */
+
+$font-body:         "Helvetica", sans-serif;
+$font-title:        "Verdana", sans-serif;
+$font-code:         "Courier New", monospace;
+
+$colour-alpha:      #333; // Body text colour
+$colour-beta:       #085d84; // Titles and/or links colour
+$colour-gamma:      #4086a6; // Hover state colour
+
+
+/* ==========================================================================
+    Generic elements
+   ========================================================================== */
+
+html {
+    font-size: 62.5%; // Equals to 10px
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    color: $colour-alpha;
+    background: #fff;
+    font: 1.6rem/1.4 $font-body;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+.button {
+    -webkit-font-smoothing: antialiased;
+}
+
+p,
+ul,
+ol,
+pre {
+    margin: 0 0 2.4rem;
+}
+
+p {
+    padding: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+code,
+pre {
+    padding: 0 3px;
+    font-family: $font-code;
+    background: #eee;
+    border: 1px solid #ddd;
+    @include border-radius(2);
+}
+
+pre {
+    padding: 2rem 0 0;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    white-space: pre;
+    word-wrap: normal;
+    overflow: auto;
+}
+
+hr {
+    width: 100%;
+    margin: 2.5rem auto;
+    border-top: 1px solid #ccc;
+}
+
+.to-left {
+    text-align: left;
+}
+
+.to-right {
+    text-align: right;
+}
+
+@include selection-colour(#d1dfe4);
+
+a,
+:link,
+:visited {
+    color: $colour-beta;
+    text-decoration: none;
+} 
+
+a:hover,
+a.active {
+    color: $colour-gamma;
+    text-decoration: none;
+}
+
+[href^="mailto:"] {
+    white-space: nowrap;
+}
+
+a {
+    @include transition(all, .4s, ease);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 .6em;
+    font-family: $font-title;
+    font-weight: normal;
+    font-style: normal;
+    color: $colour-alpha;
+}
+
+h1 {
+    @include font-size(5.6);
+}
+
+h2 {
+    margin: 3.8rem 0 2.8rem;
+    @include font-size(2.8);
+}
+
+h3 {
+    @include font-size(2.2);
+}
+
+
+/* ==========================================================================
+    Wrappers
+   ========================================================================== */
+
+.wrap {
+    margin: 0 auto;
+    padding: 0 9.2rem;
+    max-width: 960px;
+    @include box-sizing(border-box);
+}
+
+
+/* ==========================================================================
+    The Header
+   ========================================================================== */
+
+.header {
+    margin: 7.5rem auto 0;
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    .site-title {
+        a {
+            color: $colour-alpha;
+        }
+
+        a:hover {
+            @include opacity(8);
+        }
+    }
+
+    .main-navigation {
+        margin-bottom: 2.5rem;
+        border-bottom: 1px solid #ccc;
+
+        li {
+            display: inline-block;
+            margin-left: 3.5rem;
+
+            a {
+                display: inline-block;
+                padding: 1.2rem 0;
+                font-family: $font-title;
+                @include font-size(2.2);
+                color: $colour-alpha;
+            }
+
+            a:hover {
+                color: $colour-gamma;
+            }
+
+            a.active {
+                color: $colour-beta;
+            }
+        }
+
+        li:first-child {
+            margin: 0;
+        }
+    }
+}
+
+
+/* ==========================================================================
+    Content
+   ========================================================================== */
+
+.content {
+    margin: 5rem auto;
+}
+
+
+/* ==========================================================================
+    The Footer
+   ========================================================================== */
+
+.footer {
+    margin: 0 auto 5rem;
+    color: #bbb;
+}
