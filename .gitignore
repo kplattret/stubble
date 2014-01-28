@@ -1,5 +1,6 @@
 # Exclude the files below from the git repo
 
+_site
 sitemap.*
 
 *.sublime-*

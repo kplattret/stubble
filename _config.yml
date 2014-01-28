@@ -1,0 +1,8 @@
+name: Stubble
+url: http://kevinplattret.me/stubble
+
+markdown: rdiscount
+pygments: true
+exclude: ['README.md', 'LICENCE.md', 'sass', '*.sublime-*']
+permalink: /:year/:month/:title/
+relative_permalinks: false
