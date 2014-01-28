@@ -1,0 +1,8 @@
+# Exclude the files below from the git repo
+
+sitemap.*
+
+*.sublime-*
+
+*.DS_Store
+*Thumbs.DB

@@ -1,0 +1,64 @@
+/* ==========================================================================
+    SASS mixins
+   ========================================================================== */
+
+// Font size and line height
+// Usage example: h1 { @include font-size(2.4, 3.2); }
+@mixin font-size($size: 1, $line: $size * 1.4) {
+    font-size:    ($size * 10) + px;
+    line-height:  ($line * 10) + px;
+    font-size:    $size + rem;
+    line-height:  $line + rem;
+}
+
+// Mouse selection colour where supported
+// Usage example: @include selection-colour(#ffc096);
+@mixin selection-colour($colour) {
+    ::-moz-selection {
+        background: $colour;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $colour;
+        text-shadow: none;
+    }
+}
+
+// Rounded corners
+// Usage example: .box { @include border-radius(1rem); }
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius + px;
+       -moz-border-radius: $radius + px;
+        -ms-border-radius: $radius + px;
+         -o-border-radius: $radius + px;
+            border-radius: $radius + px;
+}
+
+// Transition
+// Usage example: a { @include transition(all, .4s, ease); }
+@mixin transition($property: all, $duration: .2s, $timing: linear) {
+    -webkit-transition: $property $duration $timing;
+       -moz-transition: $property $duration $timing;
+        -ms-transition: $property $duration $timing;
+         -o-transition: $property $duration $timing;
+            transition: $property $duration $timing;
+}
+
+// Box-sizing
+// Usage example: div { @include box-sizing(border-box); }
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+       -moz-box-sizing: $type;
+            box-sizing: $type; 
+}
+
+// Opacity
+// Usage example: div { @include box-sizing(border-box); }
+@mixin opacity($value) {
+    $index1: $value * 10;
+    $index2: $value / 10;
+    zoom: 1;
+    filter: alpha(opacity=$index1);
+    opacity: $index2;
+}

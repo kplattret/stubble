@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Kevin Plattret -- Author -- @kplattret
+
+# THANKS
+
+    <name> -- <twitter>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5 & CSS3
+    SASS -- http://sass-lang.com/
+    jQuery -- http://jquery.com/
+    Modernizr -- http://modernizr.com/
+    Smooth Scroll -- http://cferdinandi.github.io/smooth-scroll/
+    Normalize.css -- http://necolas.github.io/normalize.css/
+    HTML5 Boilerplate -- http://html5boilerplate.com/
+    Toast.css -- https://daneden.me/toast/
+    Animate.css -- http://daneden.github.io/animate.css/
