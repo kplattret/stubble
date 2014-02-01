@@ -1,7 +1,5 @@
 # Stubble
 
-## A front-end base for your websites
-
 Stubble is a custom front-end base code intended for small projects, that I put together for my personnal use. Because it it relatively flexible, I thought others might like to use it as well, so I decided to share it publicly. Although I tried my best to stick to best practices and standards, please bear in mind that this project is the result of an opiniated work.
 
 ## Technologies and resources
