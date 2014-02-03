@@ -68,3 +68,5 @@ Every great beard starts with stubble. Every great website starts with a solid b
 ## Have questions? Want to contribute?
 
 Feel free to get in touch via social media or email if you have any questions or comment. Although it is open-source, this is more of a personnal project, which means that I'm not particularly looking for anyone to get involved here. Having said that, I'm always learning and improving my ways, so this project is likely to evolve fairly regularly which might include your contributions.
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/kplattret/stubble/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
