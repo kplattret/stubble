@@ -2,13 +2,16 @@
     SASS variables
    ========================================================================== */
 
+$path-to-images:    "../img";
+
 $font-body:         "Helvetica", sans-serif;
 $font-title:        "Verdana", sans-serif;
 $font-code:         "Courier New", monospace;
 
 $colour-alpha:      #333; // Body text colour
-$colour-beta:       #085d84; // Titles and/or links colour
-$colour-gamma:      #4086a6; // Hover state colour
+$colour-beta:       #085d84; // Titles colour
+$colour-links:      #548629; // Links colour
+$colour-hover:      #4086a6; // Hover state colour
 
 
 /* ==========================================================================
@@ -93,13 +96,13 @@ hr {
 a,
 :link,
 :visited {
-    color: $colour-beta;
+    color: $colour-links;
     text-decoration: none;
 } 
 
 a:hover,
 a.active {
-    color: $colour-gamma;
+    color: $colour-hover;
     text-decoration: none;
 }
 
@@ -121,7 +124,7 @@ h6 {
     font-family: $font-title;
     font-weight: normal;
     font-style: normal;
-    color: $colour-alpha;
+    color: $colour-beta;
 }
 
 h1 {
@@ -164,7 +167,7 @@ h3 {
 
     .site-title {
         a {
-            color: $colour-alpha;
+            color: $colour-beta;
         }
 
         a:hover {
@@ -189,11 +192,11 @@ h3 {
             }
 
             a:hover {
-                color: $colour-gamma;
+                color: $colour-hover;
             }
 
             a.active {
-                color: $colour-beta;
+                color: $colour-links;
             }
         }
 
