@@ -10,7 +10,7 @@ $font-code:         "Courier New", monospace;
 
 $colour-alpha:      #333; // Body text colour
 $colour-beta:       #085d84; // Titles colour
-$colour-links:      #548629; // Links colour
+$colour-links:      #085d84; // Links colour
 $colour-hover:      #4086a6; // Hover state colour
 
 
@@ -139,6 +139,80 @@ h2 {
 h3 {
     @include font-size(2.2);
 }
+
+
+/* ==========================================================================
+    Form controls
+   ========================================================================== */
+
+form {
+    fieldset {
+        label {
+            display: none;
+        }
+
+        input,
+        textarea,
+        select {
+            -webkit-appearance: none;
+            vertical-align: middle;
+            outline: none;
+            @include border-radius(0);
+            @include box-sizing(border-box);
+            @include transition(all, .25s, ease-in);
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="search"],
+        input[type="url"],
+        input[type="tel"],
+        textarea {
+            padding: 18px 36px;
+            width: 100%;
+            font-family: $font-body;
+            @include font-size(2.4);
+            border: none;
+            background: #ccc;
+            color: $colour-alpha;
+
+            &:hover,
+            &:focus {
+                background: #ddd;
+            }
+        }
+
+        input[type="submit"],
+        input[type="button"] {
+            float: right;
+            padding: 18px 36px;
+            border: none;
+            font-family: $font-body;
+            @include font-size(2.4);
+            color: $colour-alpha;
+            background: #888;
+
+            &:hover,
+            &:active {
+                background: #777;
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            @include border-radius(0);
+        }
+
+        textarea {
+            overflow: auto;
+            resize: vertical;
+            vertical-align: top;
+        }
+    }
+}
+
+@include input-placeholder-colour(#666);
 
 
 /* ==========================================================================
