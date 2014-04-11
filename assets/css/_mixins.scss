@@ -11,7 +11,7 @@
     line-height:  $line + rem;
 }
 
-// Mouse selection colour where supported
+// Mouse selection colour (where supported)
 // Usage example: @include selection-colour(#ffc096);
 @mixin selection-colour($colour) {
     ::-moz-selection {
@@ -25,14 +25,34 @@
     }
 }
 
+// Input field placeholder colour (where supported)
+// Usage example: @include input-placeholder-colour(#ffc096);
+@mixin input-placeholder-colour($colour) {
+    ::-webkit-input-placeholder {
+        color: $colour;
+    }
+
+    :-moz-placeholder {
+        color: $colour;
+    }
+
+    ::-moz-placeholder {
+        color: $colour;
+    }
+
+    :-ms-input-placeholder {
+        color: $colour;
+    }
+}
+
 // Rounded corners
 // Usage example: .box { @include border-radius(1rem); }
 @mixin border-radius($radius) {
-    -webkit-border-radius: $radius + px;
-       -moz-border-radius: $radius + px;
-        -ms-border-radius: $radius + px;
-         -o-border-radius: $radius + px;
-            border-radius: $radius + px;
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+         -o-border-radius: $radius;
+            border-radius: $radius;
 }
 
 // Transition
@@ -53,12 +73,31 @@
             box-sizing: $type; 
 }
 
+// Rotation
+// Usage example: div { @include rotation(-90); }
+@mixin rotation($value) {
+    -webkit-transform: rotate($value + deg);
+       -moz-transform: rotate($value + deg);
+        -ms-transform: rotate($value + deg);
+         -o-transform: rotate($value + deg);
+            transform: rotate($value + deg);
+}
+
 // Opacity
-// Usage example: div { @include box-sizing(border-box); }
+// Usage example: div { @include opacity(8.5); }
 @mixin opacity($value) {
     $index1: $value * 10;
     $index2: $value / 10;
     zoom: 1;
     filter: alpha(opacity=$index1);
     opacity: $index2;
+}
+
+// Background size
+// Usage example: div { @include background-size(cover); }
+@mixin background-size($value) {
+    -webkit-background-size: $value;
+       -moz-background-size: $value;
+         -o-background-size: $value;
+            background-size: $value;
 }
