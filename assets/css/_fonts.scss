@@ -7,12 +7,12 @@ $path-to-fonts: "../font"; // This is relative to the location of 'main.min.css'
 /*
 
 @font-face {
-    font-family: 'My Font';
+    font-family: "My Font";
     src: url("#{$path-to-fonts}/my-font.eot");
-    src: url("#{$path-to-fonts}/my-font.eot?#iefix') format('embedded-opentype"),
-         url("#{$path-to-fonts}/my-font.svg#my_font') format('svg"),
-         url("#{$path-to-fonts}/my-font.woff') format('woff"),
-         url("#{$path-to-fonts}/my-font.ttf') format('truetype");
+    src: url("#{$path-to-fonts}/my-font.eot?#iefix") format("embedded-opentype"),
+         url("#{$path-to-fonts}/my-font.svg#my_font") format("svg"),
+         url("#{$path-to-fonts}/my-font.woff") format("woff"),
+         url("#{$path-to-fonts}/my-font.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
