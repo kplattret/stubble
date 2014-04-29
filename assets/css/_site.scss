@@ -242,10 +242,10 @@ form {
     .site-title {
         a {
             color: $colour-beta;
-        }
 
-        a:hover {
-            @include opacity(8);
+            &:hover {
+                @include opacity(8);
+            }
         }
     }
 
@@ -263,19 +263,19 @@ form {
                 font-family: $font-title;
                 @include font-size(2.2);
                 color: $colour-alpha;
+
+                &:hover {
+                    color: $colour-hover;
+                }
+
+                &.active {
+                    color: $colour-links;
+                }
             }
 
-            a:hover {
-                color: $colour-hover;
+            &:first-child {
+                margin: 0;
             }
-
-            a.active {
-                color: $colour-links;
-            }
-        }
-
-        li:first-child {
-            margin: 0;
         }
     }
 }
